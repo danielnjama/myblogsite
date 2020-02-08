@@ -1,0 +1,326 @@
+{% load static %}
+{% static "photos" as baseUrl %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+{% block title %}
+<title>BlackMarket | Shop with us today</title>
+{% endblock title %}
+    
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Promote Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %} ">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}" type="text/css" media="all" />
+	  <link rel="stylesheet" href=" {% static 'css/slider.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href=" {% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+   <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Fonts -->
+
+
+	<!--For contacts begins-->
+
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href=" {% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}">
+	<!--For contacts ends-->
+</head>
+<body>
+
+<style>
+.header1{
+    background-color: green;
+    height: auto;
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+    animation: head 10s steps(150) infinite;
+    overflow: hidden;      
+    white-space: nowrap;
+    position:  -webkit-sticky;
+    position: sticky;
+	/*margin-left:30%;
+	margin-right: 30%;*/
+	border-radius: 20px;
+    
+
+    
+}
+
+
+@keyframes head{
+0%{
+  width: 10%;
+}
+50%{
+  width: 90%;
+}
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: blue;    }
+    49%{    color: green; }
+    60%{    color: yellow; }
+    99%{    color:black;  }
+    100%{   color: brown;    }
+}
+
+
+.bm img{
+border-radius: 30%;
+text-align: left;
+position: absolute;
+display: block;
+}
+
+</style>
+
+
+   <!-- header -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href=" {% url 'index' %}">Black Market</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href=" {% url 'sell' %}">Sell</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0"  method = 'POST' action='search'>
+    {% csrf_token %}
+      <div > <select name='choice' class="form-control mr-sm-3">
+<option value="none"></option>
+  <option value="laptops">laptops</option>
+  <option value="accessories">accessories</option>
+  <option value="printers">printers</option>
+  <option value="phones">phones</option>
+  <option value="television">television</option>
+  <option value="repairs">repairs</option>
+</select></div>
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</header>
+<!-- //header -->
+
+
+<!-- banner -->
+
+<div class="banner" id="home">
+
+	<div class="layer">
+		<div class="container">
+			<div class="banner-text-w3pvt">{% block header %}
+			
+				<!-- banner slider-->
+				<div class="csslider infinity" id="slider1">
+					
+					<ul class="banner_slide_bg">
+						<li>
+						<div class="bm">
+						
+						</div>
+						
+							<div class="w3ls_banner_txt">
+										
+								<h3 class="b-w3ltxt text-capitalize mt-md-4" style="text-align:center;"> <img src="{% static 'images/bm.png' %}">  <br/> Best Marketing Platform: get laptops, Phones and accessories at a cheaper price</h3>
+			
+								
+								
+							</div>
+							
+						</li>
+					</ul>
+					
+				</div>{% endblock header %}
+				
+				<!-- //banner slider-->
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- //banner -->
+
+<!-- //about -->
+<!-- about bottom -->
+
+<!-- //about bottom -->
+<!-- team -->
+{% block content %}
+
+<section class="team py-5" id="team">
+	<div class="container py-md-5 py-3">
+		<div class="title-desc text-center" >
+			<h2 class="heading heading1 mb-2" > <span class="blinking" >Hot Deals</span></h2>
+		<h3 class="heading heading1 mb-sm-5 mb-3"></h3>
+		</div>
+		<div class="row team-grid">
+		{% if products %}
+		{% for item in products %}
+
+			<div class="col-lg-3 col-sm-6 mb-4">
+			<img src=" {{item.img.url}}" height="230px" width="200px" alt="{{item.description}}" />
+			<h5 class="title" >{{item.description}}</h5> <br>
+						<button>KSH: </button> <span class="post" style="font-weight: bold;" >{{item.price|intcomma}}</span>
+				<div class="box13">
+					
+					<div class="box-content">
+					<h2></h2>
+						
+						<!--<ul class="social">
+							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+						</ul>-->
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% else %}
+			<div class="col-lg-3 col-sm-6 mb-4">
+			<p>No results at the moment. Keep checking for future updates<p>
+			</div>
+
+			{% endif %}
+	
+
+		</div>
+	</div>
+</section>
+{% endblock content %}
+
+{% block footer %}
+
+<div class="contact1">
+<div class="wrap-input1 validate-input" >
+					
+					<div class="input1"><div class="header1">Contact Us to place an order or make an enquiry on 0706421091 </div></div>
+				</div>
+	
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src=" {% static 'images/img-01.png' %}" alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" method="POST" action="send_email">
+				<span class="contact1-form-title">
+					Get in touch with  US
+				</span>
+				{% csrf_token %}
+
+				<div class="wrap-input1 validate-input" >
+					<input class="input1" type="text" name="name" placeholder="Name" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" >
+					<input class="input1" type="email" name="email" placeholder="Email" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" >
+					<input class="input1" type="text" name="subject" placeholder="Subject" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" >
+					<textarea class="input1" name="message" placeholder="Message" required></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Send Email
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+{% endblock footer %}
+
+<footer class="container-fluid">
+  <p style="text-align:center;padding:10px">&copy;Danny <!--<a href="https://www.facebook.com/dan.njaz" target="_blank"></a> -->Copyright 2020 </p>
+</p>
+</footer>
+
+
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src=" {% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src=" {% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src=" {% static 'js/main.js' %}"></script>
+
+
+
+</body>
+</html>
